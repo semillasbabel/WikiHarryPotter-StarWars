@@ -39,18 +39,7 @@ function App() {
     <NavigationContainer>
       
       <Stack.Navigator
-      
-        screenOptions={{
-          headerStyle: {
-            backgroundColor: "#9e9e9e"},
-            headerTintColor: '#E53935',
-          headerTitleStyle:{
-            fontSize: 25,
-            fontWeight: 'bold',
-          },
-          headerShown: false,
-          headerTitleAlign: 'center',
-        }}>
+        screenOptions={{headerShown: false}}>
 
         <Stack.Screen
           name={menuKeys.navegacionmenu}
