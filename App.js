@@ -1,20 +1,7 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
+import MainMenu from './Data/MainMenu'
 
 export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Volviendo al principio</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
+  return <MainMenu/>;
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
