@@ -140,7 +140,7 @@ function HousesScreen({ navigation }) {
       <Houses.Screen name="Details" component={Details} />
     </Houses.Navigator>
   );
-
+}
 
 function SearchAll({navigation}){
   const navi = useNavigation();
@@ -209,32 +209,3 @@ function Searchhouses({ navigation }) {
   )
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
