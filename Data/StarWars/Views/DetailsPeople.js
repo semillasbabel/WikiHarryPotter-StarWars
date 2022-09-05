@@ -1,6 +1,6 @@
 import React from "react";
 import {Text, Image, View, Button, TouchableOpacity, ScrollView} from 'react-native';
-import { styles } from "../Estilos/Estiloswars";
+import { styles } from "../Styles/StylesheetSW";
 import { Card, Icon } from "@rneui/themed";
 import { color } from "@rneui/base";
 
@@ -24,13 +24,13 @@ function DetailsScreen({ route, navigation }) {
         />
         <Text style={{ marginBottom: 10 }}></Text>
         
-            <Text style={styles.card2}>Name: {item.Name}</Text>
-            <Text style={styles.card2}>peso: {item.Height}</Text>
-            <Text style={styles.card2}>House: {item.mass}</Text>
-            <Text style={styles.card2}>Date of birth: {item.birth_year}</Text>
-            <Text style={styles.card2}>Ancestry: {item.gender}</Text>
-            <Text style={styles.card2}>Patronus: {item.patronus}</Text>
-            <Text style={styles.card2}>Actor: {item.actor}</Text>
+            <Text style={styles.card2}>Nombre: {item.name}</Text>
+            <Text style={styles.card2}>Altura: {item.height}</Text>
+            <Text style={styles.card2}>Peso: {item.mass}</Text>
+            <Text style={styles.card2}>Año de nacimiento: : {item.birth_year}</Text>
+            <Text style={styles.card2}>Genero: {item.gender}</Text>
+           
+
         </Card>
     
 </View>

@@ -1,10 +1,11 @@
 import React,{Component} from 'react';
-import { Text, View, SafeAreaView, FlatList, Alert, ScrollView, TouchableOpacity, ActivityIndicator, ImageBackground} from 'react-native';
+import { Text, View, SafeAreaView, FlatList, Alert, ScrollView, TouchableOpacity, ActivityIndicator} from 'react-native';
 import axios, { AxiosError } from 'axios';
-import Imagelist from './imagenlist.js';
-// import {SwitchSearchSW} from "../Data/RequestSW";
+import { useNavigation } from '@react-navigation/native';
+import Imagenlist from './imagenlist';
+import {SwitchSearchSW} from "../Data/RequestSW";
 
-import {styles} from "../Estilos/Estiloswars";
+import {styles} from "../Styles/StylesheetSW";
 
 export default class CharactersComponent extends Component{
 
@@ -19,39 +20,39 @@ export default class CharactersComponent extends Component{
 
   async componentDidMount() {
     const {SearchType} = this.props;
-
-    await axios({
-        method: "get",
-        url: `https://swapi.dev/api/people/?page=1`,
-    })
-    .then(res => this.setState({Busqueda: res.data.results, loading: false}));
+    this.setState({Busqueda: await SwitchSearchSW(SearchType), loading: false});
   }
 
   render(){
     const {Busqueda, loading} = this.state;
     const {navigation} = this.props;
+    // this.actualizar();
     if(!loading){
       return (
         <SafeAreaView>
           <FlatList
             data={Busqueda}
+            // renderItem={this.renderItem}
             renderItem={(data) => (
             <TouchableOpacity onPress={() => navigation.push('Details', {item: data.item })}>
-              <View style={styles.item2}>
-               
-                <Text style={styles.text2}>{data.item.name}</Text>
+              <View style={styles.item}>
                 
-                <Imagelist urlimg = {`${data.item.image}`} />
+                <Text style={styles.text}>{data.item.name}</Text>
+                {/* <Text>{saludo}</Text> */}
+                
+                <Imagenlist urlimg = {`${data.item.image}`} />
                 
               </View>
             </TouchableOpacity>
             )}
+
+            // keyExtractor={item=>item.name}
           />
         </SafeAreaView>
       )
     }
     else{
-      return <ActivityIndicator size="large" color="#white"/>
+      return <ActivityIndicator size="large" color="#000"/>
     }
   }
 

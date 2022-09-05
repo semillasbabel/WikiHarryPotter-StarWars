@@ -4,9 +4,9 @@ import axios, { AxiosError } from 'axios';
 import Imagelist from './imagenlist.js';
 // import {SwitchSearchSW} from "../Data/RequestSW";
 
-import {styles} from "../Estilos/Estiloswars";
+import {styles} from "../Styles/StylesheetSW";
 import { Card } from '@rneui/themed';
-import { BlurView, VibrancyView } from "@react-native-community/blur";
+// import { BlurView, VibrancyView } from "@react-native-community/blur";
 
 export default class CharactersComponent extends Component{
 
