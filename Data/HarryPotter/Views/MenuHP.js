@@ -51,23 +51,23 @@ export default class App extends Component {
               tabBarIcon: ({ color, size }) => {
                 let iconName;
                 
-                if (route.name === 'Personajes') {
-                  iconName = 'people-outline',
+                if (route.name === hpkeys.TabCharacteres) {
+                  iconName = hpkeys.Characteresicon,
                   size = 30
                 }
                 
-                if (route.name === 'Estudiantes') {
-                iconName = 'book-outline';
+                if (route.name === hpkeys.TabEstudents) {
+                iconName = hpkeys.Estudentsicon;
                 size = 30
                 }
                 
-                if (route.name === 'Staff') {
-                iconName = 'person-circle-outline';
+                if (route.name === hpkeys.TabStaff) {
+                iconName = hpkeys.Stafficon;
                 size = 30
                 }
                 
-                if (route.name === 'Casas') {
-                iconName = 'home-outline';
+                if (route.name === hpkeys.TabHouses) {
+                iconName = hpkeys.Housesicon;
                 size = 30
                 }
                 
@@ -82,10 +82,10 @@ export default class App extends Component {
               tabBarActiveTintColor: '#e8b800',
               tabBarInactiveTintColor: '#7f0000'
           })}>
-            <Tab.Screen name="Personajes" component={PersonjesScreen} />
-            <Tab.Screen name="Estudiantes" component={EstudiantesScreen} />
-            <Tab.Screen name="Staff" component={StaffScreen} />
-            <Tab.Screen name="Casas" component={CasasScreen} />
+            <Tab.Screen name={hpkeys.TabCharacteres} component={PersonjesScreen} />
+            <Tab.Screen name={hpkeys.TabEstudents} component={EstudiantesScreen} />
+            <Tab.Screen name={hpkeys.TabStaff} component={StaffScreen} />
+            <Tab.Screen name={hpkeys.TabHouses} component={CasasScreen} />
           </Tab.Navigator>
         </View>
 
