@@ -2,7 +2,7 @@ import React,{Component} from 'react';
 import { Text, View, SafeAreaView, FlatList, Alert, ScrollView, TouchableOpacity, ActivityIndicator, ImageBackground} from 'react-native';
 import axios, { AxiosError } from 'axios';
 import Imagelist from './imagenlist.js';
-// import {SwitchSearchSW} from "../Data/RequestSW";
+import {SwitchSearchSW} from "../Data/RequestSW";
 
 import {styles} from "../Styles/StylesheetSW";
 import { Card } from '@rneui/themed';
@@ -21,12 +21,7 @@ export default class CharactersComponent extends Component{
 
   async componentDidMount() {
     const {SearchType} = this.props;
-
-    await axios({
-        method: "get",
-        url: `https://swapi.dev/api/films/`,
-    })
-    .then(res => this.setState({Busqueda: res.data.results, loading: false}));
+    this.setState({Busqueda: await SwitchSearchSW(SearchType), loading: false});
   }
 
   renderItem(data){
@@ -45,7 +40,6 @@ export default class CharactersComponent extends Component{
 
   render(){
     const {Busqueda, loading} = this.state;
-    const {navigation} = this.props;
     if(!loading){
       return (
         <SafeAreaView>
