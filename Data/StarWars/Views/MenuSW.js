@@ -14,6 +14,7 @@ import {swkeys} from '../Data/KeysSW'
 
 // import Lista1 from "./Personjeshp";
 import DetailsPeople from "./DetailsPeople"
+import DetailsPlanet from "./DetailsPlanet"
 
 
 import {styles} from "../Styles/StylesheetSW";
@@ -128,7 +129,7 @@ function PlanetsScreen() {
   return (
     <Planets.Navigator screenOptions={{headerShown: false}}> 
       <Planets.Screen name="Home" component={HomePlanet}/>
-      {/* <Planets.Screen name="Details" component={Detalles}/> */}
+      <Planets.Screen name="Details" component={DetailsPlanet}/>
     </Planets.Navigator>
   );
 }
@@ -150,7 +151,7 @@ function VehiclesScreen() {
   return (
     <Vehicles.Navigator screenOptions={{headerShown: false}}>
         <Vehicles.Screen name="Home" component={HomeVehicles}/>
-        <Vehicles.Screen name="Details" component={DetailsScreen}/>
+        <Vehicles.Screen name="Details" component={Details}/>
     </Vehicles.Navigator>
   );
 }
