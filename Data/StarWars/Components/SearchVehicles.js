@@ -35,12 +35,18 @@ export default class CharactersComponent extends Component{
             // renderItem={this.renderItem}
             renderItem={(data) => (
             <TouchableOpacity onPress={() => navigation.push('Details', {item: data.item })}>
-              <View style={styles.item}>
+              <View style={styles.item2}>
                 
-                <Text style={styles.text}>{data.item.name}</Text>
-                {/* <Text>{saludo}</Text> */}
-                
-                <Imagenlist urlimg = {`${data.item.image}`} />
+       <ScrollView> 
+           <View style={{backgroundColor: "white", borderRadius: 15,opacity: 0.6, height: 150, marginHorizontal: 20, marginVertical: 20 }}>
+              <Text style={styles.textview}>Nombre: {data.item.name}</Text>
+              <Text style={styles.textview}>Modelo:{data.item.model}</Text>
+              <Text style={styles.textview}>Velocidad Maxima: {data.item.max_atmosphering_speed}</Text>
+              <Text style={styles.textview}>Pasajeros:{data.item.passengers}</Text>       
+              <Text style={styles.textview}>Consumibles:{data.item.consumables}</Text>
+              <Text style={styles.textview}>Tipo de vehiculo:{data.item.vehicle_class}</Text>
+           </View>
+        </ScrollView>
                 
               </View>
             </TouchableOpacity>
@@ -57,9 +63,6 @@ export default class CharactersComponent extends Component{
   }
 
 }
-
-
-
 
 
 // import React,{Component} from 'react';
@@ -88,7 +91,7 @@ export default class CharactersComponent extends Component{
 
 //     await axios({
 //         method: "get",
-//         url: `https://swapi.dev/api/planets/`,
+//         url: `https://swapi.dev/api/vehicles/`,
 //     })
 //     .then(res => this.setState({Busqueda: res.data.results, loading: false}));
 //   }
@@ -98,12 +101,13 @@ export default class CharactersComponent extends Component{
 //     <ScrollView> 
 //       <View style={{backgroundColor: "white", borderRadius: 15,opacity: 0.6, height: 150, marginHorizontal: 20, marginVertical: 20 }}>
 //       <Text style={styles.textview}>Nombre: {data.item.name}</Text>
-//       <Text style={styles.textview}>Rotación:{data.item.rotation}</Text>
-//       <Text style={styles.textview}>Clima: {data.item.climate}</Text>
-//       <Text style={styles.textview}>Terreno:{data.item.terrain}</Text>
-//       <Text style={styles.textview}>Población:{data.item.population}</Text>
+//       <Text style={styles.textview}>Modelo:{data.item.model}</Text>
+//       <Text style={styles.textview}>Velocidad Maxima: {data.item.max_atmosphering_speed}</Text>
+//       <Text style={styles.textview}>Pasajeros:{data.item.passengers}</Text>
+//       <Text style={styles.textview}>Consumibles:{data.item.consumables}</Text>
+//       <Text style={styles.textview}>Tipo de vehiculo:{data.item.vehicle_class}</Text>
 //       </View>
-     
+      
 //     </ScrollView>
 //     )
 //   }

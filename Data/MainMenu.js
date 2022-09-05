@@ -46,17 +46,16 @@ function App() {
           component={HomeScreen}
           options={{}}
         />
-
-        <Stack.Screen 
+{/* 
+         <Stack.Screen 
           name={menuKeys.navegacionhp} 
           component={HarryPotter}
-        />
+        /> */}
 
-        {/* <Stack.Screen 
+        <Stack.Screen 
           name={menuKeys.navegacionsw} 
           component={StarWars}
-          options={{ title: 'StarWars'}}
-        /> */}
+        /> 
 
       </Stack.Navigator>
     </NavigationContainer>

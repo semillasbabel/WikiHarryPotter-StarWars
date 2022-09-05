@@ -58,10 +58,6 @@ export default class CharactersComponent extends Component{
 
 }
 
-
-
-
-
 // import React,{Component} from 'react';
 // import { Text, View, SafeAreaView, FlatList, Alert, ScrollView, TouchableOpacity, ActivityIndicator, ImageBackground} from 'react-native';
 // import axios, { AxiosError } from 'axios';
@@ -88,7 +84,7 @@ export default class CharactersComponent extends Component{
 
 //     await axios({
 //         method: "get",
-//         url: `https://swapi.dev/api/planets/`,
+//         url: `https://swapi.dev/api/starships/`,
 //     })
 //     .then(res => this.setState({Busqueda: res.data.results, loading: false}));
 //   }
@@ -97,13 +93,14 @@ export default class CharactersComponent extends Component{
 //     return( 
 //     <ScrollView> 
 //       <View style={{backgroundColor: "white", borderRadius: 15,opacity: 0.6, height: 150, marginHorizontal: 20, marginVertical: 20 }}>
-//       <Text style={styles.textview}>Nombre: {data.item.name}</Text>
-//       <Text style={styles.textview}>Rotación:{data.item.rotation}</Text>
-//       <Text style={styles.textview}>Clima: {data.item.climate}</Text>
-//       <Text style={styles.textview}>Terreno:{data.item.terrain}</Text>
-//       <Text style={styles.textview}>Población:{data.item.population}</Text>
+//       <Text style={styles.textview}>nombre: {data.item.name}</Text>
+//       <Text style={styles.textview}>Modelo:{data.item.model}</Text>
+//       <Text style={styles.textview}>Valor: {data.item.cost_in_credits}</Text>
+//       <Text style={styles.textview}>Velocidad:{data.item.max_atmosphering_speed}</Text>
+//       <Text style={styles.textview}>Pasajeros:{data.item.passengers}</Text>
+//       <Text style={styles.textview}>Consumibles:{data.item.consumables}</Text>
 //       </View>
-     
+      
 //     </ScrollView>
 //     )
 //   }
