@@ -11,7 +11,7 @@ export async function SwitchSearchSW(SearchType){
 
         case swkeys.PERSONSKEY:
             Path = swkeys.PERSONSPATH;
-            Paginas = 1;
+            Paginas = 9;
             return await SWREQUEST(Path, Paginas); 
         break;
 

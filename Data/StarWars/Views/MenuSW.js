@@ -5,8 +5,14 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 // import Imagelist from '../Componentes/imagenlist.js';
-import SearchComponent from '../Components/SearchPeople';
-import Moviescomponent from '../Components/SearchMovie';
+
+import SearchPeople from '../Components/SearchPeople';
+import SearchMovies from '../Components/SearchMovie';
+import SearchPlanets from "../Components/SearchPlanets";
+import SearchShips from "../Components/SearchShips";
+import SearchSpecie from "../Components/SearchSpecies";
+import SearchVehicles from "../Components/SearchVehicles"
+
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import { useNavigation } from '@react-navigation/native';
 import {swkeys} from '../Data/KeysSW'
@@ -15,6 +21,9 @@ import {swkeys} from '../Data/KeysSW'
 // import Lista1 from "./Personjeshp";
 import DetailsPeople from "./DetailsPeople";
 import DetailsPlanet from "./DetailsPlanets";
+import DetailsSpecie from "./DetailsSpecies";
+import DetailsVehicles from "./DetailsVehicles";
+import DetailsShips from "./DetailShips";
 
 
 import {styles} from "../Styles/StylesheetSW";
@@ -109,7 +118,6 @@ export default class App extends Component{
   }
 
 const people = createNativeStackNavigator();
-
 function PeopleScreen() {
   return (
     <View style={{flex:1,}}>
@@ -124,7 +132,6 @@ function PeopleScreen() {
 
 
 const Planets = createNativeStackNavigator();
-
 function PlanetsScreen() {
   return (
     <Planets.Navigator screenOptions={{headerShown: false}}> 
@@ -135,7 +142,6 @@ function PlanetsScreen() {
 }
 
 const Movies = createNativeStackNavigator();
-
 function MoviesScreen() {
   return (
     <Movies.Navigator screenOptions={{headerShown: false}}>
@@ -146,37 +152,32 @@ function MoviesScreen() {
 }
 
 const Vehicles = createNativeStackNavigator();
-
 function VehiclesScreen() {
   return (
     <Vehicles.Navigator screenOptions={{headerShown: false}}>
         <Vehicles.Screen name="Home" component={HomeVehicles}/>
-        <Vehicles.Screen name="Details" component={Details}/>
+        <Vehicles.Screen name="Details" component={DetailsVehicles}/>
     </Vehicles.Navigator>
   );
 }
 
-
-
 const Ships = createNativeStackNavigator();
-
 function StarshipsScreen() {
   return (
     <Ships.Navigator screenOptions={{headerShown: false}}>
       <Ships.Screen name="Home" component={HomeShips}/>
-      {/* <Ships.Screen name="Details" component={DetailsScreen}/> */}
+      <Ships.Screen name="Details" component={DetailsShips}/>
     </Ships.Navigator>
   );
 }
 
 
 const Species = createNativeStackNavigator();
-
 function SpeciesScreen() {
   return (
     <Species.Navigator screenOptions={{headerShown: false}}>
       <Species.Screen name="Home" component={HomeSpecie}/>
-      {/* <Species.Screen name="Details" component={DetailsScreen}/> */}
+      <Species.Screen name="Details" component={DetailsSpecie}/>
     </Species.Navigator>
   );
 }
@@ -186,28 +187,53 @@ function SpeciesScreen() {
 
 function HomePerson({navigation}){
     const navi = useNavigation();
-    return <SearchComponent {...navigation} SearchType={swkeys.PERSONSKEY} navigation={navi}/>;
+    return(
+    <View style={{flex: 1, backgroundColor: "#8e8e8e"}}> 
+     <SearchPeople {...navigation} SearchType={swkeys.PERSONSKEY} navigation={navi}/>
+     </View>
+    )
 }
 function HomePlanet({navigation}){
     const navi = useNavigation();
-    return <SearchComponent {...navigation} SearchType={swkeys.PLANETSKEY} navigation={navi}/>;
+    return (
+       <View style={{flex: 1, backgroundColor: "#8e8e8e"}}> 
+    <SearchPlanets {...navigation} SearchType={swkeys.PLANETSKEY} navigation={navi}/>
+    </View> 
+    )
 }
   
 function HomeMovie({navigation}){
     const navi = useNavigation();
-    return <SearchComponent {...navigation} SearchType={swkeys.FILMSKEY} navigation={navi}/>;
+    return(
+        <View style={{flex: 1, backgroundColor: "#8e8e8e"}}>
+            <SearchMovies {...navigation} SearchType={swkeys.FILMSKEY} navigation={navi}/>
+        </View>
+     )
+   
 }
 function HomeVehicles({navigation}){
     const navi = useNavigation();
-    return <SearchComponent {...navigation} SearchType={swkeys.VehiclesKEY} navigation={navi}/>;
+    return (
+        <View style={{flex: 1, backgroundColor: "#8e8e8e"}}>
+            <SearchVehicles {...navigation} SearchType={swkeys.VehiclesKEY} navigation={navi}/>
+        </View>
+    )
 }
 function HomeShips({navigation}){
     const navi = useNavigation();
-    return <SearchComponent {...navigation} SearchType={swkeys.STARSHIPSKEY} navigation={navi}/>;
+    return (
+        <View style={{flex: 1, backgroundColor: "#8e8e8e"}}> 
+         <SearchShips {...navigation} SearchType={swkeys.STARSHIPSKEY} navigation={navi}/>
+        </View> 
+    )
 }
 function HomeSpecie({navigation}){
     const navi = useNavigation();
-    return <SearchComponent {...navigation} SearchType={swkeys.SPECIESKEY} navigation={navi}/>;
+    return (
+        <View style={{flex: 1, backgroundColor: "#8e8e8e"}}> 
+     <SearchSpecie {...navigation} SearchType={swkeys.SPECIESKEY} navigation={navi}/>
+     </View> 
+     )
 }
   
   

@@ -1,5 +1,34 @@
 export const swkeys = {
 
+    detailsimage: "https://www.plantillasdememes.com/img/plantillas/imagen-no-disponible01601774755.jpg",
+
+
+
+
+    TabPersonsname: "Personas",
+    Personsicon: "person-outline",
+
+    TabPlanetsname: "Planets",
+    Planetsicon: "ios-planet-outline",
+
+    TabFilmsname: "Peliculas",
+    Fimlsicon: "ios-film-outline",
+
+    TabSpeciesname: "Especies",
+    Speciesicon: "people-outline",
+
+    TabVehiclesname: "Vehiculos",
+    Vehiclesicon: "ios-car-sport-outline",
+
+    TabStarchipsname: "Naves",
+    Starchipsicon: "rocket-outline",
+
+
+
+
+
+
+
     PERSONSKEY: "SWPersons",
     PERSONSPATH: "https://swapi.dev/api/people/?page=",
 

@@ -3,7 +3,7 @@ import {Image, Text} from 'react-native';
 
 import {styles} from "../Styles/StylesheetSW";
 
-export default function Button(props){
+export default function (props){
     let {urlimg} = props;
 
     if (urlimg == "") {
@@ -11,6 +11,6 @@ export default function Button(props){
     }
     
     return (
-        <Image source={{uri: urlimg}} style={styles.image}/>
+        <Image source={{uri: urlimg}} style={styles.image2}/>
     );
   }

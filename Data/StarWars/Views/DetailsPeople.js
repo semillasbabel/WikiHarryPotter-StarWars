@@ -3,6 +3,7 @@ import {Text, Image, View, Button, TouchableOpacity, ScrollView} from 'react-nat
 import { styles } from "../Styles/StylesheetSW";
 import { Card, Icon } from "@rneui/themed";
 import { color } from "@rneui/base";
+import {swkeys} from "../Data/KeysSW"
 
 
 function DetailsScreen({ route, navigation }) {
@@ -10,17 +11,16 @@ function DetailsScreen({ route, navigation }) {
   return (
     <View style={{flex: 1, backgroundColor: "gray"}}>
     <TouchableOpacity style={styles.btnBack2} onPress={() => navigation.goBack()}>
-      <Text style={styles.textback2}>Volver a Seleccion de personajes</Text>
+      <Text style={styles.textback2}>Volver</Text>
     </TouchableOpacity>
 
         <Card>
         <Card.Title style={styles.cardtext2}>{item.name}</Card.Title>
         <Card.Divider style={styles.divider2}/>
         <Card.Image
-            style={ styles.foto2}
             source={{
-            uri: item.image,
-            }}
+            uri: swkeys.detailsimage,}}
+            style={{borderRadius:15}}
         />
         <Text style={{ marginBottom: 10 }}></Text>
         

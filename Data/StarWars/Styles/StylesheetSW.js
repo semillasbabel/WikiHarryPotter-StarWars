@@ -5,7 +5,7 @@ import { StyleSheet} from 'react-native';
 export const styles = StyleSheet.create({
 
 item2:{
-    backgroundColor: "transparent",
+    backgroundColor: "blur",
     borderStyle: 'solid',
     borderColor: "black",
     borderBottomWidth: 1,
@@ -14,19 +14,20 @@ item2:{
     justifyContent: "space-between",
     paddingLeft: 10,
     paddingRight: 10,
+    height: 100,
     
   },
   text2:{
     fontSize: 22,
-    color:"yellow",
+    color:"Black",
     fontWeight: "bold",
     
   },
 
   image2:{
-    height: 90,
-    width: 90,
-    borderRadius:100,
+   height:75,
+   width:75,
+    borderRadius:50,
   paddingLeft: 50,
     alignContent:'flex-end'
     
@@ -98,7 +99,7 @@ item2:{
   },
   textview:{
     fontSize: 20,
-    color: "red",
+    color: "##212121",
     alignContent:"center",
     alignItems:"center",
     marginHorizontal:15,

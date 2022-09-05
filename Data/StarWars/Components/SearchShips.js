@@ -35,12 +35,13 @@ export default class CharactersComponent extends Component{
             // renderItem={this.renderItem}
             renderItem={(data) => (
             <TouchableOpacity onPress={() => navigation.push('Details', {item: data.item })}>
-              <View style={styles.item}>
+              <View style={styles.item2}>
                 
-                <Text style={styles.text}>{data.item.name}</Text>
-                {/* <Text>{saludo}</Text> */}
+                <Text style={styles.text2}>{data.item.name}</Text>
+               
+               
                 
-                <Imagenlist urlimg = {`${data.item.image}`} />
+                <Imagenlist urlimg = ""/>
                 
               </View>
             </TouchableOpacity>

@@ -3,11 +3,10 @@ import {Text, Image, View, Button, TouchableOpacity, ScrollView} from 'react-nat
 import { styles } from "../Styles/StylesheetSW";
 import { Card, Icon } from "@rneui/themed";
 import { color } from "@rneui/base";
-
 import {swkeys} from "../Data/KeysSW"
 
 
-function DetailsPlanets({ route, navigation }) {
+function DetailsVehicles({ route, navigation }) {
   const {item} = route.params;
   return (
     <View style={{flex: 1, backgroundColor: "gray"}}>
@@ -19,7 +18,7 @@ function DetailsPlanets({ route, navigation }) {
         <Card.Title style={styles.cardtext2}>{item.name}</Card.Title>
         <Card.Divider style={styles.divider2}/>
         <Card.Image
-          
+            
             source={{
                 uri: swkeys.detailsimage,}}
                 style={{borderRadius:15}}
@@ -27,11 +26,10 @@ function DetailsPlanets({ route, navigation }) {
         <Text style={{ marginBottom: 10 }}></Text>
         
             <Text style={styles.card2}>Nombre: {item.name}</Text>
-            <Text style={styles.card2}>Periodo de rotación: {item.rotation_period} horas</Text>
-            <Text style={styles.card2}>diametro: {item.diameter}</Text>
-            <Text style={styles.card2}>Clima : {item.climate}</Text>
-            <Text style={styles.card2}>Terreno: {item.terrain}</Text>
-            <Text style={styles.card2}>población: {item.population}</Text>
+            <Text style={styles.card2}>Modelo: {item.model}</Text>
+            <Text style={styles.card2}>Valor: {item.cost_in_credits}</Text>
+            <Text style={styles.card2}>Velocidad Maxima: {item.max_atmosphering_speed}</Text>
+            <Text style={styles.card2}>pasajeros: {item.passengers}</Text>
            
 
         </Card>
@@ -40,4 +38,4 @@ function DetailsPlanets({ route, navigation }) {
   );
 }
 
-export default DetailsPlanets;
+export default DetailsVehicles;

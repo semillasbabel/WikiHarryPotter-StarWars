@@ -38,13 +38,10 @@ export default class CharactersComponent extends Component{
               <View style={styles.item2}>
                 
        <ScrollView> 
-           <View style={{backgroundColor: "white", borderRadius: 15,opacity: 0.6, height: 150, marginHorizontal: 20, marginVertical: 20 }}>
+           <View style={styles.itemVar}>
               <Text style={styles.textview}>Nombre: {data.item.name}</Text>
               <Text style={styles.textview}>Modelo:{data.item.model}</Text>
-              <Text style={styles.textview}>Velocidad Maxima: {data.item.max_atmosphering_speed}</Text>
-              <Text style={styles.textview}>Pasajeros:{data.item.passengers}</Text>       
-              <Text style={styles.textview}>Consumibles:{data.item.consumables}</Text>
-              <Text style={styles.textview}>Tipo de vehiculo:{data.item.vehicle_class}</Text>
+              
            </View>
         </ScrollView>
                 
