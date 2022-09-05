@@ -33,11 +33,11 @@ export default class CharactersComponent extends Component{
     return( 
     <ScrollView> 
       <View style={{backgroundColor: "white", borderRadius: 15,opacity: 0.6, height: 150, marginHorizontal: 20, marginVertical: 20 }}>
-      <Text style={styles.textview}>Pelicula: {data.item.name}</Text>
-      <Text style={styles.textview}>Director De Pelicula{data.item.rotation}</Text>
-      <Text style={styles.textview}>Pelicula #: {data.item.climate}</Text>
-      <Text style={styles.textview}>Fecha de Salida:{data.item.terrain}</Text>
-      <Text style={styles.textview}>Fecha de Salida:{data.item.population}</Text>
+      <Text style={styles.textview}>Nombre: {data.item.name}</Text>
+      <Text style={styles.textview}>Rotación:{data.item.rotation}</Text>
+      <Text style={styles.textview}>Clima: {data.item.climate}</Text>
+      <Text style={styles.textview}>Terreno:{data.item.terrain}</Text>
+      <Text style={styles.textview}>Población:{data.item.population}</Text>
       </View>
      
     </ScrollView>

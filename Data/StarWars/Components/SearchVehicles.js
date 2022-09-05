@@ -24,7 +24,7 @@ export default class CharactersComponent extends Component{
 
     await axios({
         method: "get",
-        url: `https://swapi.dev/api/species/`,
+        url: `https://swapi.dev/api/vehicles/`,
     })
     .then(res => this.setState({Busqueda: res.data.results, loading: false}));
   }
@@ -34,11 +34,11 @@ export default class CharactersComponent extends Component{
     <ScrollView> 
       <View style={{backgroundColor: "white", borderRadius: 15,opacity: 0.6, height: 150, marginHorizontal: 20, marginVertical: 20 }}>
       <Text style={styles.textview}>Nombre: {data.item.name}</Text>
-      <Text style={styles.textview}>Clasificación:{data.item.classification}</Text>
-      <Text style={styles.textview}>Designación: {data.item.designation}</Text>
-      <Text style={styles.textview}>Peso promedio:{data.item.avergare_height}</Text>
-      <Text style={styles.textview}>Vida promedio:{data.item.average_lifespan}</Text>
-      <Text style={styles.textview}>lengua:{data.item.languaje}</Text>
+      <Text style={styles.textview}>Modelo:{data.item.model}</Text>
+      <Text style={styles.textview}>Velocidad Maxima: {data.item.max_atmosphering_speed}</Text>
+      <Text style={styles.textview}>Pasajeros:{data.item.passengers}</Text>
+      <Text style={styles.textview}>Consumibles:{data.item.consumables}</Text>
+      <Text style={styles.textview}>Tipo de vehiculo:{data.item.vehicle_class}</Text>
       </View>
       
     </ScrollView>
