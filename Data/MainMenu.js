@@ -47,14 +47,12 @@ function App() {
           options={{}}
         />
 
-        {/* <Stack.Screen 
+        <Stack.Screen 
           name={menuKeys.navegacionhp} 
           component={HarryPotter}
-          options={{title: 'Harry Potter'}}
-          
         />
 
-        <Stack.Screen 
+        {/* <Stack.Screen 
           name={menuKeys.navegacionsw} 
           component={StarWars}
           options={{ title: 'StarWars'}}
