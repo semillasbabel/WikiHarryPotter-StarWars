@@ -32,10 +32,6 @@ export default class App extends Component {
               <Ionicons name="arrow-back" size={30} style={styles.MenuHPiconback} />
           </TouchableOpacity>
 
-          <TouchableOpacity style={styles.MenuHPbntgoback} onPress={() => { this.props.navigation.goBack() }}>
-              <Text style={styles.MenuHPiconogoback}>🏠</Text>
-          </TouchableOpacity>
-
         </View>
 
 
