@@ -46,11 +46,11 @@ function App() {
           component={HomeScreen}
           options={{}}
         />
-{/* 
+
          <Stack.Screen 
           name={menuKeys.navegacionhp} 
           component={HarryPotter}
-        /> */}
+        />
 
         <Stack.Screen 
           name={menuKeys.navegacionsw} 
