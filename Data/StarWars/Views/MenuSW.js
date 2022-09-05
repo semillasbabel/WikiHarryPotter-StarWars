@@ -13,8 +13,8 @@ import {swkeys} from '../Data/KeysSW'
 
 
 // import Lista1 from "./Personjeshp";
-import DetailsPeople from "./DetailsPeople"
-import DetailsPlanet from "./DetailsPlanet"
+import DetailsPeople from "./DetailsPeople";
+import DetailsPlanet from "./DetailsPlanets";
 
 
 import {styles} from "../Styles/StylesheetSW";

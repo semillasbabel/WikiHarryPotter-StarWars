@@ -5,7 +5,7 @@ import { Card, Icon } from "@rneui/themed";
 import { color } from "@rneui/base";
 
 
-function DetailsScreen({ route, navigation }) {
+function DetailsPlanets({ route, navigation }) {
   const {item} = route.params;
   return (
     <View style={{flex: 1, backgroundColor: "gray"}}>
@@ -37,4 +37,4 @@ function DetailsScreen({ route, navigation }) {
   );
 }
 
-export default DetailsScreen;
+export default DetailsPlanets;
