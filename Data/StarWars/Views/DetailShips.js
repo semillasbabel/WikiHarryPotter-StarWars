@@ -9,7 +9,7 @@ import {swkeys} from "../Data/KeysSW"
 function DetailsShips({ route, navigation }) {
   const {item} = route.params;
   return (
-    <View style={{flex: 1, backgroundColor: "gray"}}>
+    <View style={styles.Detailscontainer}>
     <TouchableOpacity style={styles.btnBack2} onPress={() => navigation.goBack()}>
       <Text style={styles.textback2}>Volver</Text>
     </TouchableOpacity>
