@@ -51,7 +51,7 @@ export default class App extends Component{
             />
             <View>
               <TouchableOpacity style={{ marginEnd: 320, paddingBottom: 25 }} onPress={() => { this.props.navigation.goBack() }}>
-                <Text style={{ paddingRight:35,fontSize: 17, marginVertical:-30 }}>🌎</Text>
+                <Text style={{fontSize: 17, marginVertical:-30 }}>🌎</Text>
               </TouchableOpacity>
             </View>
   
