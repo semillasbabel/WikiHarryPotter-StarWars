@@ -27,7 +27,7 @@ export default class CharactersComponent extends Component{
   renderItem(data){
     return( 
     <ScrollView> 
-      <View style={{backgroundColor: "white", borderRadius: 15,opacity: 0.6, height: 150, marginHorizontal: 20, marginVertical: 20 }}>
+      <View style={{backgroundColor: "#CD201F", borderRadius: 15, height: 150, marginHorizontal: 20, marginVertical: 20 }}>
       <Text style={styles.textview}>Pelicula: {data.item.title}</Text>
       <Text style={styles.textview}>Director De Pelicula{data.item.director}</Text>
       <Text style={styles.textview}>Pelicula #: {data.item.episode_id}</Text>
