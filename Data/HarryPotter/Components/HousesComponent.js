@@ -29,7 +29,7 @@ export default class CharactersComponent extends Component{
       return (
         <View style={{backgroundColor: "#7f0000"}}>
         
-            <View style={{height: 60}}>
+            <View style={{height: 60, alignItems: "center",}}>
                 <TouchableOpacity style={styles.HousesbtnBack} onPress={() => navigation.goBack()}>
                     <Text style={styles.Housestextback}>VOLVER A SELECCIÓN DE ESCUELAS</Text>
                 </TouchableOpacity>
