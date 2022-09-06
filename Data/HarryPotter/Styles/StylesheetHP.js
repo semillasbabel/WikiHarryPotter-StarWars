@@ -153,7 +153,7 @@ export const styles = StyleSheet.create({
     },
 
     foto:{
-        marginHorizontal:100, 
+        marginHorizontal:50, 
         height:160, 
         width:160, 
         borderRadius: 80,

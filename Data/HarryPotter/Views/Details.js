@@ -19,7 +19,10 @@ function DetailsScreen({ route, navigation }) {
       <Text style={styles.textback}>Volver a la Seleccion de Personaje</Text>
     </TouchableOpacity>
 
-        <Card>
+    <View style={{flex: 1, alignContent:"center"}}>
+      <ScrollView>
+      <Card>
+      
         <Card.Title style={styles.cardtext}>{item.name}</Card.Title>
         <Card.Divider style={styles.divider}/>
         <Card.Image
@@ -37,7 +40,10 @@ function DetailsScreen({ route, navigation }) {
             <Text style={styles.card}>Ancestry: {item.ancestry}</Text>
             <Text style={styles.card}>Patronus: {item.patronus}</Text>
             <Text style={styles.card}>Actor: {item.actor}</Text>
-        </Card>
+ 
+      </Card>
+    </ScrollView>
+  </View>
     
 </View>
   );
