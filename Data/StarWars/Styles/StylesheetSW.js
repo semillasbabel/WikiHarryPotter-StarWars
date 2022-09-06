@@ -77,9 +77,7 @@ item2:{
   Detailscontainer:{
     flex: 1, 
     backgroundColor: "gray",
-    // justifyContent: "center",
-    alignContent:"center",
-    // alignItems: "center",
+    alignItems: "center",
   },
 
   btnBack2:{
