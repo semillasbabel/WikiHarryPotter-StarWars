@@ -1,6 +1,10 @@
 import axios from 'axios';
 import {hpkeys} from './KeysHP';
 
+const RetDefault = [
+    {Default: "No se expecifico el tipo de busqueda"}
+]
+
 export async function SwitchSearchHP(SearchType){ /*Cambiar las funciones y variables a minuscula*/ 
     let Path = "";
 
@@ -41,6 +45,10 @@ export async function SwitchSearchHP(SearchType){ /*Cambiar las funciones y vari
             return await HPREQUESTAXIO(Path); 
         break;
 
+        default:
+            return RetDefault[0];
+        break;
+
     }
 
 }
@@ -50,7 +58,7 @@ export async function SwitchSearchHP(SearchType){ /*Cambiar las funciones y vari
 let TEMP = [];
 let RETURN = [];
 
-async function HPREQUESTAXIO(Path = ""){
+export async function HPREQUESTAXIO(Path = ""){
 
     await axios({
         method: "get",
@@ -58,7 +66,7 @@ async function HPREQUESTAXIO(Path = ""){
     })
     .then(res => {TEMP.push(res.data), vali = valiset()})
     .catch((error) => {TEMP.push([{name:`${error.name}: ${error.message}`}])})
-    
+
     if (RETURN.length > 0) {
         RETURN = [];
 
