@@ -14,7 +14,7 @@ function DetailsScreen({ route, navigation }) {
   }
 
   return (
-    <View style={{flex: 1, backgroundColor: "#7f0000"}}>
+    <View style={{flex: 1, backgroundColor: "#7f0000", alignItems: "center"}}>
     <TouchableOpacity style={styles.btnBack} onPress={() => navigation.goBack()}>
       <Text style={styles.textback}>Volver a la Seleccion de Personaje</Text>
     </TouchableOpacity>
