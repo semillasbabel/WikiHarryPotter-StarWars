@@ -1,6 +1,10 @@
 import axios from 'axios';
 import {swkeys} from './KeysSW';
 
+const RetDefault = [
+    {Default: "No se expecifico el tipo de busqueda"}
+]
+
 export async function SwitchSearchSW(SearchType){ 
     let Path = "";
     let Paginas;
@@ -44,6 +48,10 @@ export async function SwitchSearchSW(SearchType){
             return await SWREQUEST(Path, Paginas);
         break;
 
+        default:
+            return RetDefault[0];
+        break;
+
     }
 
 }
@@ -52,15 +60,15 @@ let TEMP = [];
 let RETURN = [];
 let TEMPFOR = [];
 
-export async function SWREQUEST(Path = "", Paginas){
+export async function SWREQUEST(Path = "", Paginas = 0){
 
     TEMP = [];
 
-    for (let i = 1; i <= Paginas; i++) {
+    if (Paginas == 0) {
 
         await axios({
             method: "get",
-            url: `${Path}${i}`,
+            url: Path,
         })
         .then(res => {TEMPFOR.push(res.data.results), vali = valiset()})
         .catch((error) => {TEMPFOR.push([{name:`${error.name}: ${error.message}`}])})
@@ -70,9 +78,25 @@ export async function SWREQUEST(Path = "", Paginas){
         })
     
         TEMPFOR = [];
-    }
 
-    console.log(TEMP);
+    } else {
+
+        for (let i = 1; i <= Paginas; i++) {
+
+            await axios({
+                method: "get",
+                url: `${Path}${i}`,
+            })
+            .then(res => {TEMPFOR.push(res.data.results), vali = valiset()})
+            .catch((error) => {TEMPFOR.push([{name:`${error.name}: ${error.message}`}])})
+    
+            TEMPFOR[0].forEach(function(dato,index){
+                TEMP.push(dato);
+            })
+        
+            TEMPFOR = [];
+        }
+    }
 
     return TEMP;
 }
@@ -80,7 +104,7 @@ export async function SWREQUEST(Path = "", Paginas){
 
 
 
-async function SWFILMS(Path = ""){
+export async function SWFILMS(Path = ""){
 
     TEMP = [];
 
@@ -90,8 +114,6 @@ async function SWFILMS(Path = ""){
     })
     .then(res => {TEMP.push(res.data.results), vali = valiset()})
     .catch((error) => {TEMP.push([{name:`${error.name}: ${error.message}`}])})
-    
-    console.log(TEMP);
 
     if (RETURN.length > 0) {
         RETURN = [];
