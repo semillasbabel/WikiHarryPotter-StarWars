@@ -73,6 +73,15 @@ item2:{
     borderColor:"blue",
    
   },
+
+  Detailscontainer:{
+    flex: 1, 
+    backgroundColor: "gray",
+    // justifyContent: "center",
+    alignContent:"center",
+    // alignItems: "center",
+  },
+
   btnBack2:{
     marginTop:10,
     paddingVertical:10,
