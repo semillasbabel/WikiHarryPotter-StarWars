@@ -5,8 +5,8 @@ import { StyleSheet} from 'react-native';
 export const styles = StyleSheet.create({
 
 item2:{
-    backgroundColor: "blur",
-    borderStyle: 'solid',
+   
+    
     borderColor: "black",
     borderBottomWidth: 1,
     flexDirection: "row",
@@ -15,6 +15,7 @@ item2:{
     paddingLeft: 10,
     paddingRight: 10,
     height: 100,
+    backgroundColor:"#e5e5ec"
     
   },
   text2:{
@@ -50,7 +51,7 @@ item2:{
   cardtext2:{
     fontSize: 25,
     fontWeight:'bold',
-    color:'#CD201F'
+    color:'#00236d'
   },
   card2:{
     fontSize:20,
@@ -97,7 +98,7 @@ item2:{
   textback2:{
     fontSize:19,
     fontStyle:"italic",
-    color:"white"
+    color:"#00236d"
 
   },
   divider2:{

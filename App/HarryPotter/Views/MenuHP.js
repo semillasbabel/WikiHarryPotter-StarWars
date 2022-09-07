@@ -29,7 +29,7 @@ export default class App extends Component {
 
           <TouchableOpacity style={styles.MenuHPbntgoback} onPress={() => { this.props.navigation.goBack() }}>
               {/* <Text style={styles.MenuHPiconogoback}>🏠</Text> */}
-              <Ionicons name="arrow-back" size={30} style={styles.MenuHPiconback} />
+              <Ionicons name="home" size={30} style={styles.MenuHPiconback} />
           </TouchableOpacity>
 
         </View>
@@ -55,7 +55,7 @@ export default class App extends Component {
                 }
 
                 if (route.name === hpkeys.TabEstudents) {
-                iconName = hpkeys.Estudentsicon;
+                iconName = hpkeys.Studentsicon;
                 size = 30
                 }
 

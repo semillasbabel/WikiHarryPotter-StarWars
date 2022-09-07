@@ -3,6 +3,7 @@ import { Text, View, SafeAreaView, FlatList, Alert, ScrollView, TouchableOpacity
 import axios, { AxiosError } from 'axios';
 import Imagelist from './imagenlist.js';
 import {SwitchSearchSW} from "../Data/RequestSW";
+import { Tile } from "@rneui/themed";
 
 import {styles} from "../Styles/StylesheetSW";
 import { Card } from '@rneui/themed';
@@ -26,15 +27,26 @@ export default class CharactersComponent extends Component{
 
   renderItem(data){
     return( 
-    <ScrollView> 
-      <View style={{backgroundColor: "#CD201F", borderRadius: 15, height: 150, marginHorizontal: 20, marginVertical: 20 }}>
-      <Text style={styles.textview}>Pelicula: {data.item.title}</Text>
-      <Text style={styles.textview}>Director De Pelicula{data.item.director}</Text>
-      <Text style={styles.textview}>Pelicula #: {data.item.episode_id}</Text>
-      <Text style={styles.textview}>Fecha de Salida:{data.item.release_date}</Text>
-      </View>
-      
+ 
+       <View style={{ alignItems: 'center' }}>
+      <ScrollView style={{ paddingVertical: 10 }}>
+    
+      <Tile
+     imageSrc={{
+       uri:
+         'https://images.wallpapersden.com/image/download/star-wars-2019_a21nbWqUmZqaraWkpJRobWllrWdma2U.jpg',
+     }}
+     title=  {data.item.title}  
+     titleStyle={{ fontSize: 22 }}
+     featured
+     caption={data.item.director}
+     
+    
+     activeOpacity={1}
+     width={350}
+   />
     </ScrollView>
+   </View>
     )
   }
 

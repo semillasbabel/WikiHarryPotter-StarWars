@@ -58,6 +58,7 @@ export const styles = StyleSheet.create({
 
     MenuHPHouseContainer:{
         flex: 1,
+        marginVertical: 1,
     },
 
     MenuHPHousesImage:{
@@ -68,16 +69,13 @@ export const styles = StyleSheet.create({
     // Styles for Items List
 
     item:{
-        backgroundColor: "#7f0000",
-        borderStyle: 'solid',
-        borderColor: "black",
-        borderBottomWidth: 1,
+        backgroundColor: "transparent",
         flexDirection: "row",
         alignItems: "center",
         justifyContent: "space-between",
         paddingLeft: 10,
         paddingRight: 10,
-        height: 85,
+        height: 90,
     },
 
     text:{
@@ -88,9 +86,15 @@ export const styles = StyleSheet.create({
     },
     
     image:{
-        height: "90%",
-        width: "25%",
-        borderRadius:100,
+        // height: "90%",
+        // width: "20%",
+        // borderRadius:100,
+        // paddingLeft: 50,
+        // alignContent:'flex-end'
+
+        height: 67,
+        width: 66,
+        marginTop: 9,
         paddingLeft: 50,
         alignContent:'flex-end'
     },
@@ -123,9 +127,10 @@ export const styles = StyleSheet.create({
 
     btnBack:{
         marginTop:10,
+        marginBottom:20,
         paddingVertical:10,
         height:45,
-        width:350,
+        width:"90%",
         borderRadius:15,
         paddingHorizontal:10,
         
@@ -152,8 +157,7 @@ export const styles = StyleSheet.create({
         color: "red",
     },
 
-    foto:{
-        marginHorizontal:100, 
+    foto:{ 
         height:160, 
         width:160, 
         borderRadius: 80,
@@ -161,18 +165,25 @@ export const styles = StyleSheet.create({
        
     },
 
-    card:{
-        fontSize:20,
+    DetailsTextDefinition:{
+        fontSize:17,
         fontWeight:"bold",
         color: "#740001",
-        alignContent:'center',
-        justifyContent:'center',
-        textAlign:'center',
+        textAlign:'left',
         paddingStart:5,
         marginVertical: 5,
         borderColor:"red",
-        
+        marginLeft: 20,
+    },
 
+    DetailsTextResult:{
+        fontSize:17,
+        fontWeight:"bold",
+        color: "#740001",
+        textAlign:'left',
+        paddingStart:5,
+        marginVertical: 5,
+        borderColor:"red",  
     },
 
 
