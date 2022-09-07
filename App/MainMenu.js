@@ -9,7 +9,6 @@ import StarWars from "./StarWars/Views/MenuSW";
 
 import {menuKeys} from "./MainMenuKeys";
 import {styles} from "./MainMenuStyles";
-import { BlurView, VibrancyView } from "@react-native-community/blur";
 
 function HomeScreen({navigation}) {
     return (
