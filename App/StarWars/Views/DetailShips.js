@@ -51,26 +51,9 @@ function DetailsShips({ route, navigation }) {
               onPress={() => navigation.goBack()}/>
       </View>
     
-        <View style={{height: 80, alignItems:"center"}}>
-          <Button
-            title="Volver"
-            titleStyle={{ color: `#00236d`, fontSize:23 }}
-            buttonStyle={{
-              borderColor: `black`,
-            }}
-            type="clear"
-            containerStyle={{
-              width: 250,
-              paddingHorizontal:30,
-              marginVertical: 10,
-              marginHorizontal:50,
-              alignItems:"center",
-              justifyContent:"center"
-            }}
-            onPress={() => navigation.goBack()}/>
+    
         </View>
-      </View>
-    </View>
+     
   );
 }
 
