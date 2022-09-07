@@ -15,25 +15,25 @@ export async function SwitchSearchSW(SearchType){
 
         case swkeys.PERSONSKEY:
             Path = swkeys.PERSONSPATH;
-            Paginas = 9;
+            Paginas = 3;
             return await SWREQUEST(Path, Paginas); 
         break;
 
         case swkeys.PLANETSKEY:
             Path = swkeys.PLANETSPATH;
-            Paginas = 6;
+            Paginas = 3;
             return await SWREQUEST(Path, Paginas); 
         break;
 
         case swkeys.VehiclesKEY: 
             Path = swkeys.VehiclesPATH;
-            Paginas = 4;
+            Paginas = 3;
             return await SWREQUEST(Path, Paginas); 
         break;
 
         case swkeys.STARSHIPSKEY:
             Path = swkeys.STARSHIPSPATH;
-            Paginas = 4;
+            Paginas = 3;
             return await SWREQUEST(Path, Paginas);
         break;
 
@@ -44,7 +44,7 @@ export async function SwitchSearchSW(SearchType){
 
         case swkeys.SPECIESKEY:
             Path = swkeys.SPECIESPATH;
-            Paginas = 4;
+            Paginas = 3;
             return await SWREQUEST(Path, Paginas);
         break;
 

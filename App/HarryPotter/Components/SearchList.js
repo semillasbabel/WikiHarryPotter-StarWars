@@ -1,5 +1,5 @@
 import React,{Component} from 'react';
-import { Text, View, SafeAreaView, FlatList, Alert, ScrollView, TouchableOpacity, ActivityIndicator} from 'react-native';
+import { Text, View, SafeAreaView,ImageBackground, FlatList, Alert, ScrollView, TouchableOpacity, ActivityIndicator} from 'react-native';
 import axios, { AxiosError } from 'axios';
 import { useNavigation } from '@react-navigation/native';
 import ImageList from './ImageList';
@@ -26,6 +26,8 @@ export default class CharactersComponent extends Component{
   render(){
     const {Busqueda, loading} = this.state;
     const {navigation} = this.props;
+    const image = { uri: "https://cdn.pixabay.com/photo/2014/08/29/11/07/frame-430979_640.png" };
+
     // this.actualizar();
     if(!loading){
       return (
@@ -40,7 +42,17 @@ export default class CharactersComponent extends Component{
                 <Text style={styles.text}>{data.item.name}</Text>
                 {/* <Text>{saludo}</Text> */}
                 
-                <ImageList urlimg = {`${data.item.image}`} />
+                {/* <ImageList urlimg = {`${data.item.image}`} /> */}
+
+                <View style={{height: 85, width: 85, alignSelf: "center"}}>
+                  <ImageBackground source={image} resizeMode="cover" style={{height: "100%", alignItems: "center"}}>
+                    {/* <Image 
+                      source={{uri: urlimg}} 
+                      style={{height: 140, width: 140, alignSelf: "center", marginTop: 15}}
+                    /> */}
+                    <ImageList urlimg = {`${data.item.image}`} />
+                  </ImageBackground>
+                </View>
                 
               </View>
             </TouchableOpacity>

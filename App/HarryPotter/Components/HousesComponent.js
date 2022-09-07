@@ -1,5 +1,5 @@
 import React,{Component} from 'react';
-import { Text, View, SafeAreaView, FlatList, TouchableOpacity, ActivityIndicator} from 'react-native';
+import { Text, View, SafeAreaView, ImageBackground, image, FlatList, TouchableOpacity, ActivityIndicator} from 'react-native';
 import ImageList from './ImageList';
 import {SwitchSearchHP} from "../Data/RequestHP";
 
@@ -24,12 +24,14 @@ export default class CharactersComponent extends Component{
   render(){
     const {Search, loading} = this.state;
     const {navigation} = this.props;
+    const image = { uri: "https://cdn.pixabay.com/photo/2014/08/29/11/07/frame-430979_640.png" };
+
     // this.actualizar();
     if(!loading){
       return (
         <View style={{backgroundColor: "#7f0000"}}>
         
-            <View style={{height: 60}}>
+            <View style={{height: 60, alignItems: "center",}}>
                 <TouchableOpacity style={styles.HousesbtnBack} onPress={() => navigation.goBack()}>
                     <Text style={styles.Housestextback}>VOLVER A SELECCIÓN DE ESCUELAS</Text>
                 </TouchableOpacity>
@@ -47,8 +49,19 @@ export default class CharactersComponent extends Component{
             <Text style={styles.text}>{data.item.name}</Text>
             {/* <Text>{saludo}</Text> */}
             
-            <ImageList urlimg = {`${data.item.image}`} />
+            <View style={{height: 85, width: 85, alignSelf: "center"}}>
+              <ImageBackground source={image} resizeMode="cover" style={{height: "100%", alignItems: "center"}}>
+                    {/* <Image 
+                      source={{uri: urlimg}} 
+                      style={{height: 140, width: 140, alignSelf: "center", marginTop: 15}}
+                    /> */}
+                <ImageList urlimg = {`${data.item.image}`} />
+              </ImageBackground>
+            </View>
             
+          </View>
+          <View style={{alignItems: "flex-end"}}>
+            <View style={{width:"90%", height: 1.5, backgroundColor: "#6d0000"}}/>
           </View>
         </TouchableOpacity>
         )}
