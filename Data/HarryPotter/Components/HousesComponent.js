@@ -60,6 +60,7 @@ export default class CharactersComponent extends Component{
             </View>
             
           </View>
+          
           <View style={{alignItems: "flex-end"}}>
             <View style={{width:"90%", height: 1.5, backgroundColor: "#6d0000"}}/>
           </View>

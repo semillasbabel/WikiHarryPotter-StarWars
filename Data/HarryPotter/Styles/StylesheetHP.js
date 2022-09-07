@@ -69,7 +69,7 @@ export const styles = StyleSheet.create({
     // Styles for Items List
 
     item:{
-        backgroundColor: "#7f0000",
+        backgroundColor: "transparent",
         flexDirection: "row",
         alignItems: "center",
         justifyContent: "space-between",
@@ -165,18 +165,25 @@ export const styles = StyleSheet.create({
        
     },
 
-    DetailsText:{
+    DetailsTextDefinition:{
         fontSize:17,
         fontWeight:"bold",
         color: "#740001",
-        alignContent:'flex-start',
-        justifyContent:'center',
-        textAlign:'center',
+        textAlign:'left',
         paddingStart:5,
         marginVertical: 5,
         borderColor:"red",
-        
+        marginLeft: 20,
+    },
 
+    DetailsTextResult:{
+        fontSize:17,
+        fontWeight:"bold",
+        color: "#740001",
+        textAlign:'left',
+        paddingStart:5,
+        marginVertical: 5,
+        borderColor:"red",  
     },
 
 

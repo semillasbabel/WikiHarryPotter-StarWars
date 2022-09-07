@@ -28,15 +28,30 @@ function DetailsScreen({ route, navigation }) {
         </ImageBackground>
       </View>
 
-      <ScrollView style={{alignSelf: "center"}}>
-        <Text style={{ marginBottom: 10 }}></Text>
-        <Text style={styles.DetailsText}>Gender: {item.gender}</Text>
-        <Text style={styles.DetailsText}>Species: {item.species}</Text>
-        <Text style={styles.DetailsText}>House: {item.house}</Text>
-        <Text style={styles.DetailsText}>Date of birth: {item.dateOfBirth}</Text>
-        <Text style={styles.DetailsText}>Ancestry: {item.ancestry}</Text>
-        <Text style={styles.DetailsText}>Patronus: {item.patronus}</Text>
-        <Text style={styles.DetailsText}>Actor: {item.actor}</Text>
+      <ScrollView style={{alignSelf: "center", width: "100%"}}>
+        <View style={{flex: 1, flexDirection: "row",width:"100%" , marginTop: 10}}>
+
+          <View style={{width:"60%"}}>
+            <Text style={styles.DetailsTextDefinition}>Gender:</Text>
+            <Text style={styles.DetailsTextDefinition}>Species:</Text>
+            <Text style={styles.DetailsTextDefinition}>House:</Text>
+            <Text style={styles.DetailsTextDefinition}>Date of birth:</Text>
+            <Text style={styles.DetailsTextDefinition}>Ancestry:</Text>
+            <Text style={styles.DetailsTextDefinition}>Patronus:</Text>
+            <Text style={styles.DetailsTextDefinition}>Actor:</Text>
+          </View>
+
+          <View style={{width:"40%"}}>
+            <Text style={styles.DetailsTextResult}>{item.gender}</Text>
+            <Text style={styles.DetailsTextResult}>{item.species}</Text>
+            <Text style={styles.DetailsTextResult}>{item.house}</Text>
+            <Text style={styles.DetailsTextResult}>{item.dateOfBirth}</Text>
+            <Text style={styles.DetailsTextResult}>{item.ancestry}</Text>
+            <Text style={styles.DetailsTextResult}>{item.patronus}</Text>
+            <Text style={styles.DetailsTextResult}>{item.actor}</Text>
+          </View>
+
+        </View>
 
       </ScrollView>
 
@@ -50,34 +65,3 @@ function DetailsScreen({ route, navigation }) {
 }
 
 export default DetailsScreen;
-  
-// return (
-//   <View style={{flex: 1, backgroundColor: "#7f0000", alignItems: "center"}}>
-//     <ScrollView>
-      
-//       <View style={{flex: 1}}>
-//         <Card>
-//           <Card.Title style={styles.cardtext}>{item.name}</Card.Title>
-//           <Card.Divider style={styles.divider}/>
-//           <Card.Image style={styles.foto} source={{uri: urlimg,}}/>
-          
-//           <Text style={{ marginBottom: 10 }}></Text>
-//           <Text style={styles.card}>Gender: {item.gender}</Text>
-//           <Text style={styles.card}>Species: {item.species}</Text>
-//           <Text style={styles.card}>House: {item.house}</Text>
-//           <Text style={styles.card}>Date of birth: {item.dateOfBirth}</Text>
-//           <Text style={styles.card}>Ancestry: {item.ancestry}</Text>
-//           <Text style={styles.card}>Patronus: {item.patronus}</Text>
-//           <Text style={styles.card}>Actor: {item.actor}</Text>
-//         </Card>
-//       </View>
-      
-//       <View>
-//         <TouchableOpacity style={styles.btnBack} onPress={() => navigation.goBack()}>
-//           <Text style={styles.textback}>Volver a la Seleccion de Personaje</Text>
-//         </TouchableOpacity>
-//       </View>
-      
-//     </ScrollView>
-//   </View>
-// );

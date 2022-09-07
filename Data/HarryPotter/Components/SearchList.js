@@ -31,7 +31,7 @@ export default class CharactersComponent extends Component{
     // this.actualizar();
     if(!loading){
       return (
-        <SafeAreaView>
+        <SafeAreaView style={{backgroundColor: "#7f0000"}}>
           <FlatList
             data={Busqueda}
             // renderItem={this.renderItem}
@@ -53,7 +53,11 @@ export default class CharactersComponent extends Component{
                     <ImageList urlimg = {`${data.item.image}`} />
                   </ImageBackground>
                 </View>
-                
+
+              </View>
+              
+              <View style={{alignItems: "flex-end"}}>
+                  <View style={{width:"90%", height: 1.5, backgroundColor: "#6d0000"}}/>
               </View>
             </TouchableOpacity>
             )}
