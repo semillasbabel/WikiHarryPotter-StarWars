@@ -15,7 +15,9 @@ import SearchVehicles from "../Components/SearchVehicles"
 
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import { useNavigation } from '@react-navigation/native';
-import {swkeys} from '../Data/KeysSW'
+import {swkeys} from '../Data/KeysSW';
+
+import Icon from "react-native-vector-icons/Ionicons";
 
 
 // import Lista1 from "./Personjeshp";
@@ -37,26 +39,33 @@ export default class App extends Component{
         <View style={{ flex: 1 }}>
   
   
-          <View style={{ height: 40, backgroundColor: "#8d8d8d" }}>
+          <View style={{ height: 40, backgroundColor: "#00236d" }}>
   
           </View>
   
   
-          <View style={{ backgroundColor: "#CD201F", height: 65, alignItems: "center", justifyContent: "center", }}>
+          <View style={{ backgroundColor: "#5468b1", height: 85, alignItems: "center", justifyContent: "center", }}>
           <Image
               source={{
                 uri: "https://th.bing.com/th/id/R.c69efd88a70ae5080b5317f0168de053?rik=s8uEYW9htJz8UQ&riu=http%3a%2f%2fwww.gatto999.it%2fimages%2fstories%2fFilm+posters+2019%2fstar+wars+horizontal+logo+transparent.png&ehk=J8Zou%2fnLdaGIOiTthUQIr%2fmImMAnDAjpMqpL%2fnh01Dk%3d&risl=&pid=ImgRaw&r=0"
               }}
-              style={{ height: 50, width: 300, marginTop:35 }}
+              style={{ height: 30, width: 290, marginTop:70 }}
             />
-            <View>
-              <TouchableOpacity style={{ marginEnd: 320, paddingBottom: 25 }} onPress={() => { this.props.navigation.goBack() }}>
-                <Text style={{fontSize: 17, marginVertical:-30 }}>🌎</Text>
+            <View style={{paddingBottom:45, marginLeft:355}}>
+              <View style={{paddingVertical:-50}}>
+                
+             
+              <TouchableOpacity onPress={() => { this.props.navigation.goBack() }}>
+              <Icon
+                  name="home"
+                  color="#ccc"
+                  size={25}/> 
               </TouchableOpacity>
+              </View>
             </View>
-  
+            
           </View>
-        <View style={{ flex: 1, backgroundColor: "#CD201F" }}>
+        <View style={{ flex: 1, backgroundColor: "#5468b1" }}>
             <Tab.Navigator screenOptions={({ route }) => ({
               tabBarIcon: ({ color, size }) => {
                 let iconName;
@@ -93,7 +102,7 @@ export default class App extends Component{
                 return <Ionicons name={iconName} size={size} color={color} />;
               },
               tabBarStyle: {
-                backgroundColor: "#CD201F",
+                backgroundColor: "#5468b1",
               },
               headerShown: false,
               tabBarActiveTintColor: 'yellow',
