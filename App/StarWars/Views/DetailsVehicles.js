@@ -1,8 +1,8 @@
 import React from "react";
-import {Text, Image, View, Button, TouchableOpacity, ScrollView} from 'react-native';
+import {Text, Image, View, TouchableOpacity, ScrollView} from 'react-native';
 import { styles } from "../Styles/StylesheetSW";
 import { Card, Icon } from "@rneui/themed";
-import { color } from "@rneui/base";
+import { Button } from "@rneui/base";
 import {swkeys} from "../Data/KeysSW"
 
 
@@ -10,9 +10,7 @@ function DetailsVehicles({ route, navigation }) {
   const {item} = route.params;
   return (
     <View style={{flex: 1, backgroundColor: "gray"}}>
-    <TouchableOpacity style={styles.btnBack2} onPress={() => navigation.goBack()}>
-      <Text style={styles.textback2}>Volver</Text>
-    </TouchableOpacity>
+   
 
         <Card>
         <Card.Title style={styles.cardtext2}>{item.name}</Card.Title>
@@ -33,6 +31,24 @@ function DetailsVehicles({ route, navigation }) {
            
 
         </Card>
+        <View style={{height: 80, alignItems:"center"}}>
+        <Button
+              title="Volver"
+              titleStyle={{ color: `#00236d`, fontSize:23 }}
+              buttonStyle={{
+                borderColor: `black`,
+              }}
+              type="clear"
+              containerStyle={{
+                width: 250,
+                paddingHorizontal:30,
+                marginVertical: 10,
+                marginHorizontal:50,
+                alignItems:"center",
+                justifyContent:"center"
+              }}
+              onPress={() => navigation.goBack()}/>
+      </View>
     
 </View>
   );

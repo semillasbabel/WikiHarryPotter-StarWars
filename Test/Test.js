@@ -1,5 +1,5 @@
-import {SwitchSearchHP, HPREQUESTAXIO} from "../Data/HarryPotter/Data/RequestHP";
-import {SwitchSearchSW, SWREQUEST, SWFILMS} from "../Data/StarWars/Data/RequestSW";
+import {SwitchSearchHP, HPREQUESTAXIO} from "../App/HarryPotter/Data/RequestHP";
+import {SwitchSearchSW, SWREQUEST, SWFILMS} from "../App/StarWars/Data/RequestSW";
 import React from "react";
 import { View} from 'react-native';
 

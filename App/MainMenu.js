@@ -1,6 +1,6 @@
 
 import React from "react";
-import { View, Image, TouchableOpacity} from 'react-native';
+import { View, Image, TouchableOpacity, ImageBackground} from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
@@ -8,7 +8,8 @@ import HarryPotter from "./HarryPotter/Views/MenuHP";
 import StarWars from "./StarWars/Views/MenuSW";
 
 import {menuKeys} from "./MainMenuKeys";
-import {styles} from "./MainMenuStyles"
+import {styles} from "./MainMenuStyles";
+import { BlurView, VibrancyView } from "@react-native-community/blur";
 
 function HomeScreen({navigation}) {
     return (
@@ -18,6 +19,7 @@ function HomeScreen({navigation}) {
                 <TouchableOpacity onPress={() => navigation.navigate(menuKeys.navegacionhp)}>
                     <Image source={{uri: menuKeys.hpimage}}
                     style={styles.image}/>
+                    
                 </TouchableOpacity>
             </View>
 
@@ -25,6 +27,7 @@ function HomeScreen({navigation}) {
                 <TouchableOpacity  onPress={() => navigation.navigate(menuKeys.navegacionsw)}>
                     <Image source={{uri: menuKeys.swimage}}
                     style={styles.image}/>
+                    
                 </TouchableOpacity>
             </View>
 
