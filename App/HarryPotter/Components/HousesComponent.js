@@ -51,10 +51,7 @@ export default class CharactersComponent extends Component{
             
             <View style={{height: 85, width: 85, alignSelf: "center"}}>
               <ImageBackground source={image} resizeMode="cover" style={{height: "100%", alignItems: "center"}}>
-                    {/* <Image 
-                      source={{uri: urlimg}} 
-                      style={{height: 140, width: 140, alignSelf: "center", marginTop: 15}}
-                    /> */}
+                   
                 <ImageList urlimg = {`${data.item.image}`} />
               </ImageBackground>
             </View>

@@ -27,14 +27,7 @@ function DetailsPlanets({ route, navigation }) {
       </View>
     
       </TouchableOpacity>
-      {/* <Card>
-        <Card.Title style={styles.cardtext2}>{data.item.title}</Card.Title>
-        <Card.Divider style={styles.divider2}/>
-      <Text>Director De Pelicula{data.item.director}</Text>
-      <Text>Pelicula #: {data.item.episode_id}</Text>
-      <Text>Fecha de Salida:{data.item.release_date}</Text>
      
-    </Card> */}
     </ScrollView>
         
     </View>

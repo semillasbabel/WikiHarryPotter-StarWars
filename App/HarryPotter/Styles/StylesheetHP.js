@@ -86,11 +86,7 @@ export const styles = StyleSheet.create({
     },
     
     image:{
-        // height: "90%",
-        // width: "20%",
-        // borderRadius:100,
-        // paddingLeft: 50,
-        // alignContent:'flex-end'
+       
 
         height: 67,
         width: 66,
