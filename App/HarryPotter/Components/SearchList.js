@@ -40,16 +40,11 @@ export default class CharactersComponent extends Component{
               <View style={styles.item}>
                 
                 <Text style={styles.text}>{data.item.name}</Text>
-                {/* <Text>{saludo}</Text> */}
-                
-                {/* <ImageList urlimg = {`${data.item.image}`} /> */}
+             
 
                 <View style={{height: 85, width: 85, alignSelf: "center"}}>
                   <ImageBackground source={image} resizeMode="cover" style={{height: "100%", alignItems: "center"}}>
-                    {/* <Image 
-                      source={{uri: urlimg}} 
-                      style={{height: 140, width: 140, alignSelf: "center", marginTop: 15}}
-                    /> */}
+                    
                     <ImageList urlimg = {`${data.item.image}`} />
                   </ImageBackground>
                 </View>
@@ -62,7 +57,7 @@ export default class CharactersComponent extends Component{
             </TouchableOpacity>
             )}
 
-            // keyExtractor={item=>item.name}
+           
           />
         </SafeAreaView>
       )
@@ -104,48 +99,3 @@ export default class CharactersComponent extends Component{
 
 
 
-
-// export default class CharactersComponent extends Component{
-
-//   constructor(props) {
-//     super(props);
-//   }
-
-//   state = {
-//     Busqueda: [],
-//     loading: true,
-//   }
-
-//   async componentDidMount() {
-//     const {SearchType} = this.props;
-//     this.setState({Busqueda: await SwitchSearchHP(SearchType), loading: false});
-//   }
-
-//   render(){
-//     const {Busqueda, loading} = this.state;
-//     if(!loading){
-//       return (
-//         <SafeAreaView>
-//           <FlatList
-//             data={Busqueda}
-//             renderItem={(data) => (
-//             <TouchableOpacity onPress={() => Alert.alert(data.item.name)}>
-//               <View style={styles.item}>
-                
-//                 <Text style={styles.text}>{data.item.name}</Text>
-                
-//                 {/* <Imagelist urlimg = {`${data.item.image}`} /> */}
-                
-//               </View>
-//             </TouchableOpacity>
-//             )}
-//           />
-//         </SafeAreaView>
-//       )
-//     }
-//     else{
-//       return <ActivityIndicator size="large" color="#000"/>
-//     }
-//   }
-
-// }

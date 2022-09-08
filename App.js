@@ -6,7 +6,3 @@ import Test from "./Test/Test"
 export default function App() {
   return <MainMenu/>;
 }
-
-// export default function App(){
-//   return <Test/>
-// }
